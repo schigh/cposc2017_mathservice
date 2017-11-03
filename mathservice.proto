@@ -30,7 +30,7 @@ message AverageRequest {
 }
 
 message AverageResponse {
-    float average = 1;
+    double average = 1;
 }
 
 service MathService {
