@@ -25,6 +25,15 @@ message AddResponse {
     int64 sum = 1;
 }
 
+message SubRequest {
+    int64 firstnumber = 1;
+    int64 subtrahend = 2;
+}
+
+message SubResponse {
+    int64 sum = 1;
+}
+
 message AverageRequest {
     repeated int64 numbers = 1;
 }
@@ -36,4 +45,5 @@ message AverageResponse {
 service MathService {
     rpc Add(AddRequest) returns (AddResponse);
     rpc Average(AverageRequest) returns (AverageResponse);
+    rpc Subtract(SubRequest) returns (SubResponse);
 }
